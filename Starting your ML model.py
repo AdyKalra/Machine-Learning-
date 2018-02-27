@@ -47,3 +47,11 @@ print("Making predictions for the following 5 houses:")
 print(X.head())
 print("The predictions are")
 print(melbourne_model.predict(X.head()))
+
+
+#The calculation of mean absolute error in the Melbourne data is
+# import MAE from scikitlearn metrics library
+from sklearn.metrics import mean_absolute_error
+
+predicted_home_prices = melbourne_model.predict(x)
+mean_absolute_error(y, predicted_home_prices)
