@@ -34,6 +34,7 @@ melbourne_predictors = ['LotArea','YearBuilt','1stFlrSF','2ndFlrSF','FullBath','
 
 x = melbourne_data[melbourne_predictors]
                         
+#importing Decision Tree model from the scikit learn tree library
 from sklearn.tree import DecisionTreeRegressor
 
 # Define model
