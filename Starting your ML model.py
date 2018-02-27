@@ -23,3 +23,21 @@ two_columns_of_data = melbourne_data[columns_of_interest]
 
 #print a summary of two columns selected in the subset of the dataframe
 two_columns_of_data.describe()
+
+
+#Choosing the Prediction Target 
+y = melbourne_data.SalePrice
+print(y.head())
+
+# Choosing predictors
+melbourne_predictors = ['LotArea','YearBuilt','1stFlrSF','2ndFlrSF','FullBath','BedroomAbvGr','TotRmsAbvGrd']
+
+x = melbourne_data[melbourne_predictors]
+                        
+from sklearn.tree import DecisionTreeRegressor
+
+# Define model
+melbourne_model = DecisionTreeRegressor()
+
+# Fit model
+melbourne_model.fit(x, y)
