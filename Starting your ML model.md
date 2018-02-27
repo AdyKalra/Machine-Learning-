@@ -21,3 +21,35 @@ You can pull out any variable (or column) with dot-notation. This single column 
 melbourne_price_data = melbourne_data.Price
 ### the head command returns the top few lines of data.
 print(melbourne_price_data.head())
+
+
+# Choosing the Prediction Target
+
+You have the code to load your data, and you know how to index it. You are ready to choose which column you want to predict. This column is called the prediction target. There is a convention that the prediction target is referred to as y. Here is an example doing that with the example data.
+
+y = melbourne_data.Price
+Choosing Predictors
+Next we select the predictors. Sometimes, you will want to use all of the variables except the target..
+
+It's possible to model with non-numeric variables, but we'll start with a narrower set of numeric variables. In the example data, the predictors will be chosen as:
+
+In [3]:
+melbourne_predictors = ['Rooms', 'Bathroom', 'Landsize', 'BuildingArea', 
+                        'YearBuilt', 'Lattitude', 'Longtitude']
+                        
+By convention, this data is called X.
+
+
+## Building Your Model
+You will use the scikit-learn library to create your models. When coding, this library is written as sklearn, as you will see in the sample code. Scikit-learn is easily the most popular library for modeling the types of data typically stored in DataFrames.
+
+The steps to building and using a model are:
+
+### Define: 
+What type of model will it be? A decision tree? Some other type of model? Some other parameters of the model type are specified too.
+### Fit: 
+Capture patterns from provided data. This is the heart of modeling.
+### Predict: 
+Just what it sounds like
+### Evaluate: 
+Determine how accurate the model's predictions are.
