@@ -17,7 +17,7 @@ Before we can choose variables/columns, it is helpful to see a list of all colum
 Selecting a Single Column¶
 You can pull out any variable (or column) with dot-notation. This single column is stored in a Series, which is broadly like a DataFrame with only a single column of data. Here's an example: 
 
-# store the series of prices separately as melbourne_price_data.
+### store the series of prices separately as melbourne_price_data.
 melbourne_price_data = melbourne_data.Price
-# the head command returns the top few lines of data.
+### the head command returns the top few lines of data.
 print(melbourne_price_data.head())
