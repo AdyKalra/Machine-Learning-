@@ -16,3 +16,10 @@ melbourne_yearbuilt_data = melbourne_data.YearBuilt
 
 # the head command returns the top few lines of data.
 print(melbourne_yearbuilt_data.head())
+
+#Selecting two columns from data
+columns_of_interest = ['LotArea', 'YearBuilt']
+two_columns_of_data = melbourne_data[columns_of_interest]
+
+#print a summary of two columns selected in the subset of the dataframe
+two_columns_of_data.describe()
