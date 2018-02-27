@@ -53,3 +53,21 @@ Capture patterns from provided data. This is the heart of modeling.
 Just what it sounds like
 ### Evaluate: 
 Determine how accurate the model's predictions are.
+
+# What is Model Validation
+In most (though not necessarily all) applications, the relevant measure of model quality is predictive accuracy. In other words, will the model's predictions be close to what actually happens.
+
+There are many metrics for summarizing model quality, but we'll start with one called Mean Absolute Error (also called MAE). Let's break down this metric starting with the last word, error.
+
+The prediction error for each house is: 
+error=actual−predicted
+
+So, if a house cost $150,000 and you predicted it would cost $100,000 the error is $50,000.
+
+With the MAE metric, we take the absolute value of each error. This converts each error to a positive number. We then take the average of those absolute errors. This is our measure of model quality. In plain English, it can be said as
+
+On average, our predictions are off by about X
+
+Models' practical value come from making predictions on new data, so we should measure performance on data that wasn't used to build the model. The most straightforward way to do this is to exclude some data from the model-building process, and then use those to test the model's accuracy on data it hasn't seen before. This data is called validation data.
+
+The scikit-learn library has a function train_test_split to break up the data into two pieces.
